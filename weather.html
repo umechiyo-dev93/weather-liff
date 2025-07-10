@@ -29,20 +29,20 @@
     }
     .weather-card {
       max-width: 95%;
-      margin: 1em auto;
-      padding: 1.2em;
+      margin: 1.5em auto;
+      padding: 1.5em;
       border-radius: 12px;
       background-color: #f0f8ff;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       font-family: sans-serif;
       text-align: center;
-      word-break: keep-all;
-      white-space: normal;
+      box-sizing: border-box;
+      word-break: break-word;
     }
 
     .weather-card h2 {
+      font-size: 1.4em;
       margin-top: 0;
-      font-size: 1.2em;
     }
 
     .weather-card p {
@@ -68,36 +68,30 @@
       background-color: #2563eb;
     }
     #weather {
-      background: #fff;
       font-size: 1.2em;
-      line-height: 1.6;
-      margin-top: 10px;
-      padding: 1em;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      margin-top: 1em;
     }
 
-  button {
-    padding: 10px 18px;
-    font-size: 16px;
-    border: none;
-    background-color: #3b82f6;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    padding: 0.8em 1.2em;
-    margin-top: 1em;
-  }
+    button {
+      font-size: 16px;
+      padding: 0.8em 1.2em;
+      margin-top: 1em;
+      border: none;
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
 
-  button:hover {
-    background-color: #2563eb;
-  }
+    button:hover {
+      background-color: #2563eb;
+    }
 
-  #weatherButton {
-    padding: 8px 16px;
-    font-size: 1em;
-    margin-top: 10px;
-  }
+    #weatherButton {
+      padding: 8px 16px;
+      font-size: 1em;
+      margin-top: 10px;
+    }
 
   </style>
 
@@ -106,7 +100,7 @@
 <body>
   <div class="weather-card">
     <h2 id="date">情報を取得するには下のボタンを押してください</h2>
-    <p id="weather" style="margin-top: 1em;"></p>
+    <div id="weather"></div>
     <button id="weatherButton" onclick="getWeather()">表示</button>
   </div>
 
