@@ -27,6 +27,13 @@
       text-align: center;
     }
 
+    /* PC向け（広い画面では幅を固定） */
+    @media (min-width: 768px) {
+      .weather-card {
+        max-width: 480px;  /* 好みに応じて調整可能 */
+      }
+    }
+
     .weather-card h2 {
       font-size: 1em;
       margin-top: 0;
