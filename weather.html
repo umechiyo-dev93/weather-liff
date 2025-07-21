@@ -85,8 +85,7 @@
 <body>
   <div class="weather-card">
     <h2 id="date">情報を取得するには<br>下のボタンを押してください</h2>
-    <div id="weather"></div>
-    <label for="city-select">都市を選んで天気を表示：</label>
+    <label for="city-select">都市を選んで<br>天気を表示：</label>
     <select id="city-select">
       <option value="himeji">姫路</option>
       <option value="kobe">神戸</option>
@@ -94,6 +93,9 @@
       <option value="tokyo">東京</option>
     </select>
     <button id="weatherButton" onclick="getWeather()">表示</button>
+
+    <div id="weather"></div>
+    
   </div>
   
   <script>
